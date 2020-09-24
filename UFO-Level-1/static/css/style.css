@@ -35,7 +35,7 @@ body {
   bottom: 0;
   left: 0;
   padding: 5px;
-  background: #1b3146;
+  background: transparent;
 }
 
 .navbar {
@@ -136,6 +136,11 @@ select {
 .form-control:-moz-placeholder {
   /* Firefox 18- */
   color: #8e979f;
+}
+
+.footer-img{
+  height: 50px;
+  width: 35px;
 }
 
 /* media queries which will only be activated at specific screen sizes */
