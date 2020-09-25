@@ -21,7 +21,7 @@ tableData.forEach(function(UFOsighting) {
 //Giving the button function
 var button = d3.select("#filter-btn");
 button.on("click", function() {
-    body.html("");
+body.html("");
 
     //get input date for raw html nodes
     var inputElement = d3.select("#datetime");
@@ -32,8 +32,7 @@ button.on("click", function() {
     //Filter that jawn
     var filtData = tableData.filter(sighting => sighting.datetime === inputVal);
     //console.log filtered
-    console.log(filtData);
-    try {
+    console.log(filtData)
         filtData.forEach(function(selections){
             console.log(selections);
             //append one row 'tr' for each sighting
@@ -46,8 +45,5 @@ button.on("click", function() {
                 celldata.text(value)
             });
         });
-    }
-    catch(err){
-        console.log("There was an error in your search. Please try again.")
-    }
+
 });
