@@ -139,8 +139,9 @@ select {
 }
 
 .footer-img{
-  height: 50px;
-  width: 35px;
+  height: 100px;
+  width: 80px;
+  color: white;
 }
 
 /* media queries which will only be activated at specific screen sizes */

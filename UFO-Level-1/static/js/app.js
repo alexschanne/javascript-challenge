@@ -33,17 +33,21 @@ button.on("click", function() {
     var filtData = tableData.filter(sighting => sighting.datetime === inputVal);
     //console.log filtered
     console.log(filtData);
-
-    filtData.forEach(function(selections){
-        console.log(selections);
-        //append one row 'tr' for each sighting
-        var rowdata = body.append("tr");
-        //using object.entries for each value
-        Object.entries(selections).forEach(function([key, value]) {
-            console.log(key,value);
-            //append cell to row for each value
-            var celldata = rowdata.append("td");
-            celldata.text(value)
+    try {
+        filtData.forEach(function(selections){
+            console.log(selections);
+            //append one row 'tr' for each sighting
+            var rowdata = body.append("tr");
+            //using object.entries for each value
+            Object.entries(selections).forEach(function([key, value]) {
+                console.log(key,value);
+                //append cell to row for each value
+                var celldata = rowdata.append("td");
+                celldata.text(value)
+            });
         });
-    });
+    }
+    catch(err){
+        console.log("There was an error in your search. Please try again.")
+    }
 });
